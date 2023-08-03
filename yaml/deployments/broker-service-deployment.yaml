@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: broker-service
+  labels:
+    app: broker-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: broker-service
+  template:
+    metadata:
+      labels:
+        app: broker-service
+    spec:
+      containers:
+        - name: broker-service
+          image: muzaffertolgayakar/broker-service:2.0.0
+          ports:
+            - containerPort: 80

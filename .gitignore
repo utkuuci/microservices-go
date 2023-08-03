@@ -1,0 +1,5 @@
+project-config-files/data
+front-end/node_modules
+auth-service/authService
+broker-service/brokerService
+logger-service/loggerService
